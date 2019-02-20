@@ -271,3 +271,47 @@ bytes read                    :ESC[
 2019-02-21 01:49:14 INFO  ApacheHttpClient.testConnection(188) - responseCode = 200
 2019-02-21 01:49:14 INFO  ApacheHttpClient.testConnection(203) - result = true
 2019-02-21 01:49:14 INFO  ApacheHttpClient.getWebResourceAsStream(492) - responseCode = 200
+2019-02-21 01:50:09 INFO  ApacheHttpClient.sendEvent(525) - responseCode = 200
+2019-02-21 01:51:09 INFO  ApacheHttpClient.sendEvent(525) - responseCode = 200
+2019-02-21 01:51:50 ERROR JediEmulator.processEscapeSequence(110) - Unhandled Control sequence
+parsed                        :ESC[?2004l
+bytes read                    :ESC[
+2019-02-21 01:51:50 ERROR JediEmulator.processEscapeSequence(137) - Error processing OSC 1;git
+2019-02-21 01:51:54 ERROR JediEmulator.processEscapeSequence(137) - Error processing OSC 1;..JavaRushTasks
+2019-02-21 01:51:54 ERROR JediEmulator.processEscapeSequence(110) - Unhandled Control sequence
+parsed                        :ESC[?2004h
+bytes read                    :ESC[
+2019-02-21 01:52:09 INFO  ApacheHttpClient.sendEvent(525) - responseCode = 200
+2019-02-21 01:52:14 ERROR JediEmulator.processEscapeSequence(110) - Unhandled Control sequence
+parsed                        :ESC[?2004l
+bytes read                    :ESC[
+2019-02-21 01:52:14 ERROR JediEmulator.processEscapeSequence(137) - Error processing OSC 1;git
+2019-02-21 01:52:14 ERROR JediEmulator.processEscapeSequence(137) - Error processing OSC 1;..JavaRushTasks
+2019-02-21 01:52:14 ERROR JediEmulator.processEscapeSequence(110) - Unhandled Control sequence
+parsed                        :ESC[?2004h
+bytes read                    :ESC[
+2019-02-21 01:52:16 ERROR JediEmulator.processEscapeSequence(110) - Unhandled Control sequence
+parsed                        :ESC[?2004l
+bytes read                    :ESC[
+2019-02-21 01:52:16 ERROR JediEmulator.processEscapeSequence(137) - Error processing OSC 1;git
+2019-02-21 01:52:17 ERROR JediEmulator.processEscapeSequence(137) - Error processing OSC 1;..JavaRushTasks
+2019-02-21 01:52:17 ERROR JediEmulator.processEscapeSequence(110) - Unhandled Control sequence
+parsed                        :ESC[?2004h
+bytes read                    :ESC[
+2019-02-21 01:52:33 ERROR JediEmulator.processEscapeSequence(110) - Unhandled Control sequence
+parsed                        :ESC[?2004l
+bytes read                    :ESC[
+2019-02-21 01:52:33 ERROR JediEmulator.processEscapeSequence(137) - Error processing OSC 1;git
+2019-02-21 01:52:33 ERROR JediEmulator.processEscapeSequence(137) - Error processing OSC 1;..JavaRushTasks
+2019-02-21 01:52:33 ERROR JediEmulator.processEscapeSequence(110) - Unhandled Control sequence
+parsed                        :ESC[?2004h
+bytes read                    :ESC[
+2019-02-21 01:53:09 INFO  ApacheHttpClient.sendEvent(525) - responseCode = 200
+2019-02-21 01:53:15 INFO  ApacheHttpClient.getWebResourceAsStream(492) - responseCode = 200
+2019-02-21 01:53:15 INFO  ApacheHttpClient.getFilteredTasks(329) - responseCode = 200
+2019-02-21 01:53:17 INFO  ApacheHttpClient.getTaskTemplateInfo(346) - responseCode = 200
+2019-02-21 01:53:19 INFO  ApacheHttpClient.testConnection(188) - responseCode = 200
+2019-02-21 01:53:19 INFO  ApacheHttpClient.testConnection(203) - result = true
+2019-02-21 01:53:21 INFO  ApacheHttpClient.testConnection(188) - responseCode = 200
+2019-02-21 01:53:21 INFO  ApacheHttpClient.testConnection(203) - result = true
+2019-02-21 01:53:21 INFO  ApacheHttpClient.getWebResourceAsStream(492) - responseCode = 200
