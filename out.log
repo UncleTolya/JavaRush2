@@ -65,3 +65,15 @@ Caused by: org.eclipse.jgit.errors.NoRemoteRepositoryException: https://mvnrepos
 2019-02-21 01:18:09 INFO  ApacheHttpClient.refreshUserInfo(302) - Информация о пользователе получена.
 2019-02-21 01:18:09 INFO  ApacheHttpClient.startGA(33) - GAService запущен.
 2019-02-21 01:18:09 INFO  AbstractRestApiClient.startService(70) - EventsService запущен.
+2019-02-21 01:19:30 INFO  ApacheHttpClient.getWebResourceAsStream(492) - responseCode = 200
+2019-02-21 01:19:31 INFO  ApacheHttpClient.getFilteredTasks(329) - responseCode = 200
+2019-02-21 01:19:37 INFO  ApacheHttpClient.getFilteredTasks(329) - responseCode = 200
+2019-02-21 01:19:41 INFO  ApacheHttpClient.getFilteredTasks(329) - responseCode = 200
+2019-02-21 01:30:12 INFO  ApacheHttpClient.getWebResourceAsStream(492) - responseCode = 200
+2019-02-21 01:30:12 INFO  ApacheHttpClient.getFilteredTasks(329) - responseCode = 200
+2019-02-21 01:30:14 INFO  ApacheHttpClient.getTaskTemplateInfo(346) - responseCode = 200
+2019-02-21 01:30:16 INFO  ApacheHttpClient.testConnection(188) - responseCode = 200
+2019-02-21 01:30:16 INFO  ApacheHttpClient.testConnection(203) - result = true
+2019-02-21 01:30:18 INFO  ApacheHttpClient.testConnection(188) - responseCode = 200
+2019-02-21 01:30:18 INFO  ApacheHttpClient.testConnection(203) - result = true
+2019-02-21 01:30:19 INFO  ApacheHttpClient.getWebResourceAsStream(492) - responseCode = 200
