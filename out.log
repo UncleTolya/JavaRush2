@@ -315,3 +315,70 @@ bytes read                    :ESC[
 2019-02-21 01:53:21 INFO  ApacheHttpClient.testConnection(188) - responseCode = 200
 2019-02-21 01:53:21 INFO  ApacheHttpClient.testConnection(203) - result = true
 2019-02-21 01:53:21 INFO  ApacheHttpClient.getWebResourceAsStream(492) - responseCode = 200
+2019-02-21 01:54:07 ERROR JediEmulator.processEscapeSequence(110) - Unhandled Control sequence
+parsed                        :ESC[?2004l
+bytes read                    :ESC[
+2019-02-21 01:54:07 ERROR JediEmulator.processEscapeSequence(137) - Error processing OSC 1;git
+2019-02-21 01:54:07 ERROR JediEmulator.processEscapeSequence(137) - Error processing OSC 1;..JavaRushTasks
+2019-02-21 01:54:07 ERROR JediEmulator.processEscapeSequence(110) - Unhandled Control sequence
+parsed                        :ESC[?2004h
+bytes read                    :ESC[
+2019-02-21 01:54:09 INFO  ApacheHttpClient.sendEvent(525) - responseCode = 200
+2019-02-21 01:54:11 ERROR JediEmulator.processEscapeSequence(110) - Unhandled Control sequence
+parsed                        :ESC[?2004l
+bytes read                    :ESC[
+2019-02-21 01:54:11 ERROR JediEmulator.processEscapeSequence(137) - Error processing OSC 1;git
+2019-02-21 01:54:14 ERROR JediEmulator.processEscapeSequence(137) - Error processing OSC 1;..JavaRushTasks
+2019-02-21 01:54:14 ERROR JediEmulator.processEscapeSequence(110) - Unhandled Control sequence
+parsed                        :ESC[?2004h
+bytes read                    :ESC[
+2019-02-21 01:55:09 INFO  ApacheHttpClient.sendEvent(525) - responseCode = 200
+2019-02-21 01:56:09 INFO  ApacheHttpClient.sendEvent(525) - responseCode = 200
+2019-02-21 01:56:11 ERROR IcsManager.error(115) - https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-core: https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-core/info/refs?service=git-upload-pack not found
+org.jetbrains.settingsRepository.NoRemoteRepositoryException: https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-core: https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-core/info/refs?service=git-upload-pack not found
+	at org.jetbrains.settingsRepository.git.GitExKt.wrapIfNeedAndReThrow(GitEx.kt:32)
+	at org.jetbrains.settingsRepository.git.GitExKt.fetch(GitEx.kt:64)
+	at org.jetbrains.settingsRepository.git.Pull.fetch(pull.kt:94)
+	at org.jetbrains.settingsRepository.git.Pull.fetch$default(pull.kt:91)
+	at org.jetbrains.settingsRepository.ReadOnlySourceManager.update(ReadOnlySourceManager.kt:94)
+	at org.jetbrains.settingsRepository.SyncKt.updateCloudSchemes(sync.kt:164)
+	at org.jetbrains.settingsRepository.SyncManager$sync$1.invoke(sync.kt:129)
+	at org.jetbrains.settingsRepository.SyncManager$sync$1.invoke(sync.kt:34)
+	at org.jetbrains.settingsRepository.SyncManager$runSyncTask$1$$special$$inlined$runModalTask$1.run(progress.kt:27)
+	at com.intellij.openapi.progress.impl.CoreProgressManager$TaskRunnable.run(CoreProgressManager.java:736)
+	at com.intellij.openapi.progress.impl.CoreProgressManager$5.run(CoreProgressManager.java:434)
+	at com.intellij.openapi.progress.impl.CoreProgressManager.lambda$runProcess$1(CoreProgressManager.java:157)
+	at com.intellij.openapi.progress.impl.CoreProgressManager.registerIndicatorAndRun(CoreProgressManager.java:580)
+	at com.intellij.openapi.progress.impl.CoreProgressManager.executeProcessUnderProgress(CoreProgressManager.java:525)
+	at com.intellij.openapi.progress.impl.ProgressManagerImpl.executeProcessUnderProgress(ProgressManagerImpl.java:85)
+	at com.intellij.openapi.progress.impl.CoreProgressManager.runProcess(CoreProgressManager.java:144)
+	at com.intellij.openapi.application.impl.ApplicationImpl.lambda$null$10(ApplicationImpl.java:574)
+	at com.intellij.openapi.application.impl.ApplicationImpl$1.run(ApplicationImpl.java:314)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.eclipse.jgit.errors.NoRemoteRepositoryException: https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-core: https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-core/info/refs?service=git-upload-pack not found
+	at org.eclipse.jgit.transport.TransportHttp.connect(TransportHttp.java:467)
+	at org.eclipse.jgit.transport.TransportHttp.openFetch(TransportHttp.java:313)
+	at org.eclipse.jgit.transport.FetchProcess.executeImp(FetchProcess.java:137)
+	at org.eclipse.jgit.transport.FetchProcess.execute(FetchProcess.java:123)
+	at org.eclipse.jgit.transport.Transport.fetch(Transport.java:1271)
+	at org.jetbrains.settingsRepository.git.GitExKt.fetch(GitEx.kt:53)
+	... 21 more
+2019-02-21 01:56:11 ERROR IcsManager.logErrorHeader(120) - IntelliJ IDEA 2018.2.4  Build #IC-182.4505.22
+2019-02-21 01:56:11 ERROR IcsManager.logErrorHeader(126) - JDK: 1.8.0_152-release
+2019-02-21 01:56:11 ERROR IcsManager.logErrorHeader(127) - VM: OpenJDK 64-Bit Server VM
+2019-02-21 01:56:11 ERROR IcsManager.logErrorHeader(128) - Vendor: JetBrains s.r.o
+2019-02-21 01:56:11 ERROR IcsManager.logErrorHeader(129) - OS: Mac OS X
+2019-02-21 01:56:11 ERROR IcsManager.logErrorHeader(135) - Last Action: MergeSettings
+2019-02-21 01:56:32 INFO  ApacheHttpClient.getWebResourceAsStream(492) - responseCode = 200
+2019-02-21 01:56:32 INFO  ApacheHttpClient.getFilteredTasks(329) - responseCode = 200
+2019-02-21 01:56:33 INFO  ApacheHttpClient.getTaskTemplateInfo(346) - responseCode = 200
+2019-02-21 01:56:35 INFO  ApacheHttpClient.testConnection(188) - responseCode = 200
+2019-02-21 01:56:35 INFO  ApacheHttpClient.testConnection(203) - result = true
+2019-02-21 01:56:38 INFO  ApacheHttpClient.testConnection(188) - responseCode = 200
+2019-02-21 01:56:38 INFO  ApacheHttpClient.testConnection(203) - result = true
+2019-02-21 01:56:38 INFO  ApacheHttpClient.getWebResourceAsStream(492) - responseCode = 200
+2019-02-21 01:57:09 INFO  ApacheHttpClient.sendEvent(525) - responseCode = 200
