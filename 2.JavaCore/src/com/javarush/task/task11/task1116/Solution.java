@@ -1,7 +1,7 @@
-package com.javarush.task.task11.task1102;
+package com.javarush.task.task11.task1116;
 
 /* 
-Домашние животные
+Цепочка наследования
 */
 
 public class Solution {

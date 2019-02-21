@@ -1,7 +1,7 @@
-package com.javarush.task.task11.task1102;
+package com.javarush.task.task11.task1118;
 
 /* 
-Домашние животные
+Городское хозяйство
 */
 
 public class Solution {
@@ -13,6 +13,10 @@ public class Solution {
     }
 
     public class Cat extends Pet {
+
+    }
+
+    public class Car {
 
     }
 

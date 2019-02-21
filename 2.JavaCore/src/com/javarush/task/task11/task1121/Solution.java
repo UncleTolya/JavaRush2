@@ -1,14 +1,14 @@
-package com.javarush.task.task11.task1102;
+package com.javarush.task.task11.task1121;
 
 /* 
-Домашние животные
+Чужой код, незнакомый
 */
 
 public class Solution {
     public static void main(String[] args) {
     }
 
-    public class Pet {
+    public class Pet  {
 
     }
 
@@ -17,6 +17,14 @@ public class Solution {
     }
 
     public class Dog extends Pet {
+
+    }
+
+    public class House {
+
+    }
+
+    public class Airplane {
 
     }
 }
