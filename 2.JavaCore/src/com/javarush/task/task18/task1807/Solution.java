@@ -23,7 +23,6 @@ public class Solution {
         try (FileInputStream fis = new FileInputStream(fileName)) {
             while (fis.available() > 0) {
                 int next = fis.read();
-                char nextChar = Character.par
                 if (map.keySet().contains(next)) {
                     map.put(next, map.get(next) + 1);
                 } else map.put(next, 1);
@@ -31,6 +30,6 @@ public class Solution {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        if (map.keySet().contains(",")) System.out.println(map.get(","));
+        if (map.keySet().contains(44)) System.out.println(map.get(44));
     }
 }
