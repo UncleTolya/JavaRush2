@@ -1,33 +1,35 @@
-package com.javarush.task.task18.task1827;
+package com.javarush.task.task18.task1828;
+
+import java.math.BigInteger;
 
 public class Item {
     public static int itemCounter;
 
-    private int id;
+    private BigInteger id;
     private String productName;
     private double price;
     private int quantity;
 
 
     public Item(String productName, double price, int quantity) {
-        this.id = ++itemCounter;
+//        this.id = ++itemCounter;
         this.productName = productName;
         this.price = price;
         this.quantity = quantity;
     }
 
-    public Item(int id, String productName, double price, int quantity) {
+    public Item(BigInteger id, String productName, double price, int quantity) {
         this.id = id;
         this.productName = productName;
         this.price = price;
         this.quantity = quantity;
     }
 
-    public int getId() {
+    public BigInteger getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(BigInteger id) {
         this.id = id;
     }
 
