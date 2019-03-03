@@ -1,12 +1,11 @@
 package com.javarush.task.task19.task1916;
 
-import javax.swing.plaf.basic.BasicButtonUI;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.sql.BatchUpdateException;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 /* 
@@ -16,29 +15,67 @@ import java.util.List;
 public class Solution {
     public static List<LineItem> lines = new ArrayList<LineItem>();
 
-
     public static void main(String[] args) {
-        ArrayList<String> filenames = getFileNames(2);
-        String fileName1 = filenames.get(0);
-        String fileName2 = filenames.get(1);
+        String fileName1 = null;
+        String fileName2 = null;
 
+        try (BufferedReader br = new BufferedReader(new InputStreamReader(System.in))) {
+            fileName1 = br.readLine();
+            fileName2 = br.readLine();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+//        String fileName1 = "/Users/mhlv/Documents/test1";
+//        String fileName2 = "/Users/mhlv/Documents/test2";
+        ArrayList<String> list1 = readToList(fileName1);
+        ArrayList<String> list2 = readToList(fileName2);
 
-        ArrayList<ArrayList<String>> filesAsLists = getFilesAsLists(fileName1, fileName2);
-        ArrayList<String> file1 = filesAsLists.get(0);
-        ArrayList<String> file2 = filesAsLists.get(1);
-
-        fillLines(file1, file2);
-
-    }
-
-    private static void fillLines(ArrayList<String> file1, ArrayList<String> file2) {
-        for (int i = 0; i < file2.size(); i++) {
-            if (file2.get(i).equals(file1.get(i)))  {
-                lines.add(new LineItem(Type.SAME, file2.get(i)));
-            } else {
-                file2.get(i).equals(file1.get(i + 1));
+        int i = 0;
+        int j = 0;
+        while (i < list1.size() || j < list2.size()) {
+            if (i < list1.size() && j >= list2.size()) {
+                lines.add(new LineItem(Type.REMOVED, list1.get(i)));
+                break;
+            } else if (i >= list1.size() && j < list2.size()) {
+                lines.add(new LineItem(Type.ADDED, list2.get(j)));
+                break;
+            } else if(list1.get(i).equals(list2.get(j))) {
+                lines.add(new LineItem(Type.SAME, list1.get(i)));
+                i++;
+                j++;
+            } else if (!list1.get(i).equals(list2.get(j))) {
+                if (i + 1 < list1.size() && j + 1 >= list2.size()) {
+                    if (list1.get(i + 1).equals(list2.get(j))) {
+                        lines.add(new LineItem(Type.REMOVED, list1.get(i)));
+                        i++;
+                    }
+                } else if(i + 1 >= list1.size() && j + 1 < list2.size()) {
+                    if (list1.get(i).equals(list2.get(j + 1))) {
+                        lines.add(new LineItem(Type.ADDED, list2.get(j)));
+                        j++;
+                    }
+                }
+                if (j + 1 < list2.size()) {
+                    if (list1.get(i).equals(list2.get(j + 1))) {
+                        lines.add(new LineItem(Type.ADDED, list2.get(j)));
+                        j++;
+                        continue;
+                    }
+                }
+                if(i + 1 < list1.size()) {
+                    if (list1.get(i + 1).equals(list2.get(j))) {
+                        lines.add(new LineItem(Type.REMOVED, list1.get(i)));
+                        i++;
+                        continue;
+                    }
+                }
             }
         }
+
+//        for (LineItem item : lines) {
+//            System.out.println(item.type + " " + item.line);
+//        }
+
     }
 
 
@@ -58,10 +95,10 @@ public class Solution {
         }
     }
 
-    public static ArrayList<String> getFileNames(int count) {
+    public static ArrayList<String> readToList(String fileName) {
         ArrayList<String> list = new ArrayList<>();
-        try (BufferedReader br = new BufferedReader(new InputStreamReader(System.in))) {
-            for (int i = 0; i < count; i++) {
+        try (BufferedReader br = new BufferedReader(new FileReader(fileName))) {
+            while (br.ready()) {
                 list.add(br.readLine());
             }
         } catch (IOException e) {
@@ -69,30 +106,4 @@ public class Solution {
         }
         return list;
     }
-
-    public static ArrayList<ArrayList<String>> getFilesAsLists(String fileName1, String fileName2) {
-        ArrayList<String> file1 = new ArrayList<>();
-        ArrayList<String> file2 = new ArrayList<>();
-
-        try (BufferedReader readerFile1 = new BufferedReader(new FileReader(fileName1));
-             BufferedReader readerFile2 = new BufferedReader(new FileReader(fileName2))) {
-
-            while (readerFile1.ready()) {
-                file1.add(readerFile1.readLine());
-            }
-
-            while (readerFile2.ready()) {
-                file2.add(readerFile2.readLine());
-            }
-
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        ArrayList<ArrayList<String>> files = new ArrayList<>();
-        files.add(file1);
-        files.add(file2);
-
-        return files;
-    }
-
 }
