@@ -5,10 +5,14 @@ import java.io.*;
 /* 
 Найти ошибки
 */
-public class Solution {
+public class Solution implements Serializable {
     public static class A {
 
         protected String nameA = "A";
+
+        public A(){
+
+        }
 
         public A(String nameA) {
             this.nameA += nameA;
@@ -24,6 +28,27 @@ public class Solution {
             this.nameA += nameA;
             this.nameB = nameB;
         }
+
+        private void writeObject(ObjectOutputStream objectOutputStream) {
+            try {
+                objectOutputStream.defaultWriteObject();
+                objectOutputStream.writeObject(nameA);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+
+        private void readObject(ObjectInputStream objectInputStream) {
+            try {
+                objectInputStream.defaultReadObject();
+                objectInputStream.readObject();
+            } catch (IOException e) {
+                e.printStackTrace();
+            } catch (ClassNotFoundException e) {
+                e.printStackTrace();
+            }
+        }
+
     }
 
     public static void main(String[] args) throws IOException, ClassNotFoundException {
