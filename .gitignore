@@ -2,3 +2,8 @@
 out/
 out.log
 /target
+.idea
+Instruction.png
+JavaRushPlugin.properties
+JavaRushTasks.iml
+Marker
