@@ -1,8 +1,11 @@
 .idea/workspace.xml
-out/
-out.log
-/target
 .idea
+
+/out
+/LIB
+/target
+
+out.log
 Instruction.png
 JavaRushPlugin.properties
 JavaRushTasks.iml
