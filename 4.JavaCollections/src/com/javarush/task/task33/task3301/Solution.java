@@ -38,7 +38,7 @@ public class Solution {
 
     public static void convertToJSON(StringWriter writer, Object object) throws IOException {
         ObjectMapper mapper = new ObjectMapper();
-        mapper.writeValue(writer, object);
+//        mapper.writeValue(writer, object);
     }
     @JsonAutoDetect
     public static class Pet {
