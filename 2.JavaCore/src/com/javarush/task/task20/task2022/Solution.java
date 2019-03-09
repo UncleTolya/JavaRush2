@@ -1,15 +1,18 @@
 package com.javarush.task.task20.task2022;
 
 import java.io.*;
+import java.lang.reflect.Field;
 
 /* 
 Переопределение сериализации в потоке
 */
 public class Solution implements Serializable, AutoCloseable {
-    private FileOutputStream stream;
+    private transient FileOutputStream stream;
+    private String fileName;
 
     public Solution(String fileName) throws FileNotFoundException {
         this.stream = new FileOutputStream(fileName);
+        this.fileName = fileName;
     }
 
     public void writeObject(String string) throws IOException {
@@ -20,12 +23,15 @@ public class Solution implements Serializable, AutoCloseable {
 
     private void writeObject(ObjectOutputStream out) throws IOException {
         out.defaultWriteObject();
-        out.close();
     }
 
-    private void readObject(ObjectInputStream in) throws IOException, ClassNotFoundException {
+    private void readObject(ObjectInputStream in) throws IOException, ClassNotFoundException, NoSuchFieldException, IllegalAccessException {
         in.defaultReadObject();
-        in.close();
+//        Field field = stream.getClass().getDeclaredField("path");
+////        field.setAccessible(true);
+//        String path = (String) field.get(stream);
+        stream = new FileOutputStream(fileName, true);
+
     }
 
     @Override
@@ -34,24 +40,7 @@ public class Solution implements Serializable, AutoCloseable {
         stream.close();
     }
 
-    public static void main(String[] args) throws IOException, ClassNotFoundException {
-        Solution s = null;
-        try {
-            s = new Solution("/Users/mhlv/Documents/test4");
-            s.writeObject("пятьтысяч");
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        ByteArrayOutputStream arrayOutputStream = new ByteArrayOutputStream();
-        ObjectOutputStream oos = new ObjectOutputStream(arrayOutputStream);
-        s.writeObject(oos);
-
-        ByteArrayInputStream arrayInputStream = new ByteArrayInputStream(arrayOutputStream.toByteArray());
-        ObjectInputStream ois = new ObjectInputStream(arrayInputStream);
-
-        s.readObject(ois);
-        }
-
+    public static void main(String[] args) {
 
     }
 }
