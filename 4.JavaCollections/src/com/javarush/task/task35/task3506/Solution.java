@@ -35,8 +35,8 @@ public class Solution {
         System.out.println(source);
 
         /*
-[com.javarush.test.level39.lesson08.task01.Solution$C@203b4f0e, com.javarush.test.level39.lesson08.task01.Solution$B@15c330aa]
-[com.javarush.test.level39.lesson08.task01.Solution$C@203b4f0e]
+[com.javarush.tests.level39.lesson08.task01.Solution$C@203b4f0e, com.javarush.tests.level39.lesson08.task01.Solution$B@15c330aa]
+[com.javarush.tests.level39.lesson08.task01.Solution$C@203b4f0e]
          */
     }
 

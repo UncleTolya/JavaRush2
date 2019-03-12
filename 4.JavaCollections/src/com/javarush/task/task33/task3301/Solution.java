@@ -71,7 +71,7 @@ public class Solution {
 
         public void setWeight(int weight) {
             this.weight = weight;
-        } //test
+        } //tests
     }
     @JsonAutoDetect
     public static class Dog extends Pet {
