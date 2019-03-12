@@ -18,8 +18,7 @@ public class OurHashMapStorageStrategy implements StorageStrategy {
 
 
     public void resize(int newCapacity) {
-        if (table.length == DEFAULT_INITIAL_CAPACITY)
-        {
+        if (table.length == DEFAULT_INITIAL_CAPACITY) {
             threshold = Integer.MAX_VALUE;
             return;
         }
